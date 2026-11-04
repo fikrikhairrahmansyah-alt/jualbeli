@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Toko Online</h1>
+    </header>
+
+    <main>
+    <section>
+        <h2>Panel Pembeli</h2>
+        <form id="formPembeli">
+        <input id="namaproduct" placeholder="Nama Produk" required>
+        <input id="jumlah" type="number" min="1" placeholder="Jumlah" required>
+        <button type="submit" id="btnBeli">Beli Produk</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Panel Penjual</h2>
+        <form id="formProduk">
+        <input id="kode" placeholder="Kode Produk" required>
+        <input id="nama" placeholder="Nama Produk" required>
+        <input id="harga" type="number" min="0" placeholder="Harga (Rp)" required>
+        <input id="stok" type="number" min="0" placeholder="Stok" required>
+        <button type="submit" id="btnSimpan">Simpan Produk</button>
+        <button type="button" id="btnBatal">Batal</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Tabel Produk</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tabelProduk"></tbody>
+        </table>
+        <p id="pesan" role="status"></p>
+    </section>
+    </main>
+</body>
+</html>
